@@ -4,11 +4,14 @@ Authors: Samuele Sandrini, Cesare Tonola,
 Michele Delledonne, Roberto Pagani
 </p>
 
+
+======================================
+======================================
+
+## Hardware SetUp
 <p align="center">
   <img height="600" src="https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_report/blob/master/images/Robothon_Setup_Without_Electromagnet.png">
 </p>
-
-
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vestibulum, dui eget vestibulum feugiat, elit est vestibulum ex, eget mollis mi diam id felis. Proin sagittis dui eu urna pulvinar, volutpat commodo lorem porta. Maecenas est felis, pulvinar in luctus in, mollis id tortor. Nunc placerat vestibulum quam, et dignissim magna sodales in. Nunc eros ligula, pellentesque vitae velit at, hendrerit convallis nibh. Phasellus gravida ipsum eu nulla efficitur dignissim. Nam purus turpis, dictum ut tellus eu, volutpat maximus ligula. Pellentesque a efficitur sapien. Morbi nec turpis vel urna dapibus blandit in ut elit. Nam luctus porta ligula, eu bibendum sem mollis ut.
 
