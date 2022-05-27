@@ -4,11 +4,8 @@ Authors: Samuele Sandrini, Cesare Tonola,
 Michele Delledonne, Roberto Pagani
 </p>
 
-
-======================================
-======================================
-
-## Hardware SetUp
+## Hardware Setup
+The robot platform on which the challenge defined by robothon grand challange was tested is shown in the Figure below.
 <p align="center">
   <img height="600" src="https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_report/blob/master/images/Robothon_Setup_Without_Electromagnet.png">
 </p>
