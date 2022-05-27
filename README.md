@@ -1,6 +1,6 @@
 # Robothon 2022 Grand-Challenge CARI Team Report
 <p align="center">
-Samuele Sandrini, Cesare Tonola, 
+Authors: Samuele Sandrini, Cesare Tonola, 
 Michele Delledonne, Roberto Pagani
 </p>
 
