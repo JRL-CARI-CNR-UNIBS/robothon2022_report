@@ -54,6 +54,7 @@ The Cartesian-space impedance controller is used for interaction tasks such as i
 
 ## Dependencies 
 
+- [Manipulation framework](https://github.com/JRL-CARI-CNR-UNIBS/manipulation)
 
 ## Authors
 
