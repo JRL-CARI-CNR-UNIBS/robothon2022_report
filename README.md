@@ -36,7 +36,13 @@ As for the online part related to the vision system, it is used to identify the 
 
 ## Description of tasks
 
+## Repository of software modules
+- [Vision System](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_vision)
+- [Task Execution management](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_tree)
+- [Cell Configuration (Geometric configuration and controllers)](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_cell)
+
 ## Dependencies 
+
 
 ## Authors
 
