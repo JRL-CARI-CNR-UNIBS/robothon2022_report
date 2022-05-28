@@ -34,7 +34,8 @@ Regarding the software implementation, this module was developed in Python langu
 
 
 ### Task execution management
-The automatic execution of the tasks is managed by a Behavior Tree Manager. Each Robothon’s task corresponds to a SubTree.
+The automatic execution of the tasks is managed by a Behavior Tree Executor. Each Robothon’s task corresponds to a SubTree. BTs are a very efficient way of creating complex systems that are both modular and flexible. This makes it easy to manage the ability to change the order in which tasks are executed, thus creating a flexible application.
+
 ### Planning and execution
 
 
