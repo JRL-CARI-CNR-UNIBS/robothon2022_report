@@ -19,9 +19,13 @@ The setup consists of:
 Our software framework is developed using ROS (Robot Operating System). The overall framework is summarized in figure below. At the beginning, the vision system localizes the board and its feature points and advertises the reference frames (Section 2.1). Then, the sequence of tasks is executed with respect to such frames. The execution of each task combines motion planning and different kind of controllers (Sections 2.2 and Section 2.3).
 
 ### Vision System (Board Localization)
-First of all, a Hand-Eye Calibration was performed in the eye-to-hand version (camera maintained static respect robot), in order to know the reference system of the camera with respect to the robot reference system (extrinsic calibration). In addition, an intrinsic calibration was performed, in order to switch between the image reference system to the camera reference system.
+First of all, a Hand-Eye Calibration was performed in the eye-to-hand version (camera maintained static respect robot), in order to know the reference system of the camera with respect to the robot reference system (extrinsic calibration). 
+
+In addition, an intrinsic calibration was performed, in order to switch between the image reference system to the camera reference system.
+
 These two calibrations were performed once offline, and the roto-translation matrices and others parameters were saved.
 As for the online part related to the vision system, it is used to identify the position of the board relative to the robot base.
+
 
 
 
