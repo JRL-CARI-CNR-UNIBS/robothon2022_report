@@ -37,6 +37,7 @@ The different phases of a task require different controllers. In our framework, 
 - a joint-space position controller
 - a Cartesian-space position controller
 - a Cartesian-space impedance controller
+
 The joint-space position controller is used for trajectory tracking during the approach phase; the Cartesian-space position controller is used for small, relative positioning movements with respect to a Cartesian pose. 
 The Cartesian-space impedance controller is used for interaction tasks such as insertions.
 
