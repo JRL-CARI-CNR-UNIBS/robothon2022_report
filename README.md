@@ -33,6 +33,12 @@ As for the online part related to the vision system, it is used to identify the 
 
 ### Controllers
 
+The different phases of a task require different controllers. In our framework, controllers are implemented in ROS control and can be easily switched at runtime. In particular, during a "move to" skill, we use:
+- a joint-space position controller
+- a Cartesian-space position controller
+- a Cartesian-space impedance controller
+The joint-space position controller is used for trajectory tracking during the approach phase; the Cartesian-space position controller is used for small, relative positioning movements with respect to a Cartesian pose. 
+The Cartesian-space impedance controller is used for interaction tasks such as insertions.
 
 ## Description of tasks
 
