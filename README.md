@@ -24,14 +24,17 @@ First of all, a Hand-Eye Calibration was performed in the eye-to-hand version (c
 In addition, an intrinsic calibration was performed, in order to switch between the image reference system to the camera reference system.
 
 These two calibrations were performed once offline, and the roto-translation matrices and others parameters were saved.
-As for the online part related to the vision system, it is used to identify the position of the board relative to the robot base.
 
+As for the online part related to the vision system, it is used to identify the position of the board relative to the robot base. Specifically, an rgb frame is acquired as the first task, then features such as the center of the red button, key lock, and screen are identified. The features are recognized by applying border detection, color clustering, canny detection, Hough transform and custom designed vision algorithms. Once the features position was detected in the image frame, we moved on to the camera reference system and finally that of the robot base, thanks to the instrinsic and extrinsic parameters estimated in the offline part. The procedure is illustrated in the following image:
+<p align="center">
+  <img height="600" src="https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_report/blob/master/images/online_vision_scheme.png">
+</p>
 
-
+Regarding the software implementation, this module was developed in Python language, and two open-source libraries for image processing (OpenCv and Skimage) were used.
 
 
 ### Task execution management
-
+The automatic execution of the tasks is managed by a Behavior Tree Manager. Each Robothon’s task corresponds to a SubTree.
 ### Planning and execution
 
 
@@ -46,6 +49,7 @@ The joint-space position controller is used for trajectory tracking during the a
 The Cartesian-space impedance controller is used for interaction tasks such as insertions.
 
 ## Description of tasks
+
 
 ## Repository of software modules
 - [Vision System](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_vision)
