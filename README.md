@@ -68,6 +68,24 @@ Our research group software:
 - [Controllers framework](https://github.com/CNR-STIIMA-IRAS/cnr_ros_control)
 - [Trajectory controller](https://github.com/CNR-STIIMA-IRAS/cnr_motion_control)
 
+## How to run
+First, load the robotic cell:
+``
+roslaunch robothon2022_configurations real_start.launch
+``
+Locate the board with the vision system:
+``
+rosservice call /robothon2022/boardlocalization
+``
+Compute ik corresponding to each task location:
+``
+roslaunch robothon2022_tree load_locations.launch
+``
+Finally, run the behaviour tree to execute the tasks:
+``
+roslaunch robothon2022_tree run_tree.launch
+``
+
 ## Authors
 
 - Samuele Sandrini, [SamueleSandrini](https://github.com/SamueleSandrini)
