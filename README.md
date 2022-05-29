@@ -37,21 +37,20 @@ Regarding the software implementation, this module was developed in Python langu
 The automatic execution of the tasks is managed by a Behavior Tree Executor. Each Robothon’s task corresponds to a SubTree. BTs are a very efficient way of creating complex systems that are both modular and flexible. This makes it easy to manage the ability to change the order in which tasks are executed, thus creating a flexible application.
 
 ### Planning and execution
-
+Each Task is managed by the Action Planner "Manipulation"(https://github.com/JRL-CARI-CNR-UNIBS/manipulation.git), which implements pre-defined skills such as pick, place and move. A skill takes as input the goal Cartesian location, plans the sequence of motion to carry out the task and execute them. 
+In Robothon we only use skills of type "move to", based on the following pipeline:
+- Plan and execute motion to desired Cartesian pose
+- Execute custom job
 
 ### Controllers
 
-The different phases of a task require different controllers. In our framework, controllers are implemented in ROS control and can be easily switched at runtime. In particular, during a "move to" skill, we use:
-- a joint-space position controller
-- a Cartesian-space position controller
-- a Cartesian-space impedance controller
+The different phases of a task require different controllers. In our framework, controllers are implemented in ROS control and can be easily switched at runtime. In particular, during a "move to" skill, we use a joint-space position controller.
 
-The joint-space position controller is used for trajectory tracking during the approach phase; the Cartesian-space position controller is used for small, relative positioning movements with respect to a Cartesian pose. 
-The Cartesian-space impedance controller is used for interaction tasks such as insertions.
+The joint-space position controller is used for trajectory tracking during the approach phase; 
+Other controllers, such as a Cartesian-space position controller and a Cartesian-space impedance controller, are available to implement the custom jobs.
 
 ## Description of tasks
-
-
+Custom jobs could be implemented using the available controllers. This year, to simplify the implementation of the tasks and improve the transferability of the tasks manager, we have chosen to implement the single job using the UR teach pendant program editor. So, the Action Planner takes care of planning and executing the motion to the Cartesian goal, and then it loads the corresponding program to carry out the job. In this way, each job can easily be programmed (even by non-expert operators)
 
 ## Repository of software modules
 - [Vision System](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_vision)
