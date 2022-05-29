@@ -11,7 +11,7 @@ The robot platform on which the Robothon Grand Challange was tested is shown in 
 </p>
 
 The setup consists of:
-- a UR3 six-degree-of-freedom collaborative robot mounted on a fixed table. The robot does not have a force sensor but it estimates it through the current sensor on the joints. 
+- a UR3 six-degree-of-freedom collaborative robot mounted on a fixed table. The robot does not have a force sensor but it estimates torques and forces through the current sensor on the joints. 
 - a two-finger gripper, the hand-e robotiq modello, mounted on the last joint of the robot. It was chosen not to add additional fixtures to the gripper but to exploit it in its general-purpose mode.
 - a vision system consisting of an rgbd camera (depth not used for this purpose) and lighting system. Specifically, the camera is a RealSense d435, which was mounted on an articulated mechanical structure maintained statically at the ceiling. Instead, the lighting system was recovered from household applications, in the spirit of competition reuse.
 
