@@ -51,7 +51,7 @@ The joint-space position controller is used for trajectory tracking during the a
 Other controllers, such as a Cartesian-space position controller and a Cartesian-space impedance controller, are available to implement the custom jobs.
 
 ## Description of tasks
-Custom jobs could be implemented using the available controllers. This year, to simplify the implementation of the tasks and improve the transferability of the tasks manager, we have chosen to implement the single job using the UR teach pendant program editor. So, the Action Planner takes care of planning and executing the motion to the Cartesian goal, and then it loads the corresponding program to carry out the job. In this way, each job can easily be programmed (even by non-expert operators)
+Custom jobs could be implemented using the available controllers, but for this year, to simplify the implementation of the tasks and improve the transferability of the tasks manager, we have chosen to implement the single job using the UR teach pendant program editor. So, the Action Planner takes care of planning and executing the motion to the Cartesian goal, and then it loads the corresponding program to carry out the job. In this way, each job can easily be programmed (even by non-expert operators)
 
 ## Repository of software modules
 - [Vision System](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_vision)
