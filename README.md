@@ -66,7 +66,7 @@ Our research group software:
 - [Cell Configuration (Geometric configuration and controllers)](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_cell)
 - [Manipulation framework](https://github.com/JRL-CARI-CNR-UNIBS/manipulation)
 - [Controllers framework](https://github.com/CNR-STIIMA-IRAS/cnr_ros_control)
-- [Controllers](https://github.com/CNR-STIIMA-IRAS/cnr_ros_controllers, https://github.com/CNR-STIIMA-IRAS/cnr_motion_control)
+- [Trajectory controller](https://github.com/CNR-STIIMA-IRAS/cnr_motion_control)
 
 ## Authors
 
