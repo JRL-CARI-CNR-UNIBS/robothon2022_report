@@ -47,6 +47,7 @@ In Robothon we only use skills of type "move to", based on the following pipelin
 The different phases of a task require different controllers. In our framework, controllers are implemented in ROS control and can be easily switched at runtime. In particular, during a "move to" skill, we use a joint-space position controller.
 
 The joint-space position controller is used for trajectory tracking during the approach phase; 
+
 Other controllers, such as a Cartesian-space position controller and a Cartesian-space impedance controller, are available to implement the custom jobs.
 
 ## Description of tasks
