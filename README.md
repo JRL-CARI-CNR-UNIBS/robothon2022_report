@@ -54,13 +54,19 @@ Other controllers, such as a Cartesian-space position controller and a Cartesian
 Custom jobs could be implemented using the available controllers, but for this year, to simplify the implementation of the tasks and improve the transferability of the tasks manager, we have chosen to implement the single job using the UR teach pendant program editor. So, the Action Planner takes care of planning and executing the motion to the Cartesian goal, and then it loads the corresponding program to carry out the job. In this way, each job can easily be programmed (even by non-expert operators)
 
 ## Repository of software modules
+The software implemented is based on:.
+Third parties software:
+- [ROS](https://www.ros.org/)
+- [Universal robot ros driver](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver)
+- [Intel realsense ros driver](https://github.com/IntelRealSense/realsense-ros)
+
+Our research group software:
 - [Vision System](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_vision)
 - [Task Execution management](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_tree)
 - [Cell Configuration (Geometric configuration and controllers)](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_cell)
-
-## Dependencies 
-
 - [Manipulation framework](https://github.com/JRL-CARI-CNR-UNIBS/manipulation)
+- [Controllers framework](https://github.com/CNR-STIIMA-IRAS/cnr_ros_control)
+- [Controllers](https://github.com/CNR-STIIMA-IRAS/cnr_ros_controllers, https://github.com/CNR-STIIMA-IRAS/cnr_motion_control)
 
 ## Authors
 
