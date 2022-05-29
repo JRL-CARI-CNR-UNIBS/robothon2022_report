@@ -70,18 +70,25 @@ Our research group software:
 
 ## How to run
 First, load the robotic cell:
+
 ``
 roslaunch robothon2022_configurations real_start.launch
 ``
+
 Locate the board with the vision system:
+
 ``
 rosservice call /robothon2022/boardlocalization
 ``
+
 Compute ik corresponding to each task location:
+
 ``
 roslaunch robothon2022_tree load_locations.launch
 ``
+
 Finally, run the behaviour tree to execute the tasks:
+
 ``
 roslaunch robothon2022_tree run_tree.launch
 ``
