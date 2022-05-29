@@ -27,7 +27,7 @@ These two calibrations were performed once offline, and the roto-translation mat
 
 As for the online localization, the vision system is used to identify the position of the board relative to the robot base. Specifically, an rgb frame is acquired as the first task, then features such as the center of the red button, key lock, and screen are identified. The features are recognized by applying border detection, color clustering, canny detection, Hough transform and custom designed vision algorithms. Once the features position is detected in the image frame, we move on to the camera reference system and finally that of the robot base, thanks to the instrinsic and extrinsic parameters estimated in the offline part. The procedure is illustrated in the following image:
 <p align="center">
-  <img height="600" src="https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_report/blob/master/images/Vision_System.png">
+  <img width="600" src="https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_report/blob/master/images/Vision_System.png">
 </p>
 
 Regarding the software implementation, this module was developed in Python language, and two open-source libraries for image processing (OpenCv and Skimage) were used.
@@ -36,7 +36,7 @@ Regarding the software implementation, this module was developed in Python langu
 ### Task execution management
 The automatic execution of the tasks is managed by a Behavior Tree Executor. Each Robothon’s task corresponds to a SubTree. BTs are a very efficient way of creating complex systems that are both modular and flexible. This makes it easy to manage the ability to change the order in which tasks are executed, thus creating a flexible application.
 <p align="center">
-  <img height="600" src="https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_report/blob/master/images/bt.png">
+  <img width="400" src="https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_report/blob/master/images/bt.png">
 </p>
 
 ### Planning and execution
