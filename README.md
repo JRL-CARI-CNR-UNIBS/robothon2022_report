@@ -37,36 +37,38 @@ Regarding the software implementation, this module was developed in Python langu
 The automatic execution of the tasks is managed by a Behavior Tree Executor. Each Robothon’s task corresponds to a SubTree. BTs are a very efficient way of creating complex systems that are both modular and flexible. This makes it easy to manage the ability to change the order in which tasks are executed, thus creating a flexible application.
 
 ### Planning and execution
-Each Task is managed by the Action Planner "Manipulation"(https://github.com/JRL-CARI-CNR-UNIBS/manipulation.git), which implements pre-defined skills such as pick, place and move. A skill takes as input the goal Cartesian location, plans the sequence of motion to carry out the task and execute them. 
+Each task is managed by the Action Planner "Manipulation", which implements pre-defined skills such as pick, place and move. A skill takes as input the goal Cartesian location, plans the sequence of motion to carry out the task and execute them. 
 In Robothon we only use skills of type "move to", based on the following pipeline:
 - Plan and execute motion to desired Cartesian pose
-- Execute custom job
+- Execute custom jobs
 
 ### Controllers
-
-The different phases of a task require different controllers. In our framework, controllers are implemented in ROS control and can be easily switched at runtime. In particular, during a "move to" skill, we use a joint-space position controller.
-
-The joint-space position controller is used for trajectory tracking during the approach phase; 
+The different phases of a task require different controllers. In our framework, controllers are implemented in ROS control and can be easily switched at runtime. In particular, during a "move to" skill, we use a joint-space position controller for trajectory tracking during the approach phase.
 
 Other controllers, such as a Cartesian-space position controller and a Cartesian-space impedance controller, are available to implement the custom jobs.
 
-## Description of tasks
-Custom jobs could be implemented using the available controllers, but for this year, to simplify the implementation of the tasks and improve the transferability of the tasks manager, we have chosen to implement the single job using the UR teach pendant program editor. So, the Action Planner takes care of planning and executing the motion to the Cartesian goal, and then it loads the corresponding program to carry out the job. In this way, each job can easily be programmed (even by non-expert operators)
+### Custom jobs
+Custom jobs could be implemented using the available controllers, but for this year, to simplify the implementation of the tasks and improve the transferability of the tasks manager, we have chosen to implement each single job using the UR teach pendant program editor. So, the Action Planner takes care of planning (es. using an OMPL planner) and executing the motion to the Cartesian goal, and then it loads the corresponding program to carry out the job. In this way, each job can easily be programmed, even by non-expert operators.
 
 ## Repository of software modules
-The software implemented is based on:.
+The software implemented is based on:
+
 Third parties software:
 - [ROS](https://www.ros.org/)
 - [Universal robot ros driver](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver)
 - [Intel realsense ros driver](https://github.com/IntelRealSense/realsense-ros)
 
-Our research group software:
-- [Vision System](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_vision)
-- [Task Execution management](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_tree)
-- [Cell Configuration (Geometric configuration and controllers)](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_cell)
+Our research group software needed:
 - [Manipulation framework](https://github.com/JRL-CARI-CNR-UNIBS/manipulation)
 - [Controllers framework](https://github.com/CNR-STIIMA-IRAS/cnr_ros_control)
 - [Trajectory controller](https://github.com/CNR-STIIMA-IRAS/cnr_motion_control)
+
+Software developed specifically for Robothon:
+- [Vision System](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_vision)
+- [Task Execution management](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_tree)
+- [Cell Configuration (Geometric configuration and controllers)](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_cell)
+
+If you want run the entire code, follow this [guide](https://github.com/JRL-CARI-CNR-UNIBS/installation).
 
 ## How to run
 First, load the robotic cell:
