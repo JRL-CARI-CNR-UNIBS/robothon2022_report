@@ -12,11 +12,11 @@ The robot platform on which the Robothon Grand Challange was tested is shown in 
 
 The setup consists of:
 - a UR3 six-degree-of-freedom collaborative robot mounted on a fixed table. The robot does not have a force sensor but it estimates torques and forces through the current sensor on the joints. 
-- a two-finger gripper, the hand-e robotiq modello, mounted on the last joint of the robot. It was chosen not to add additional fixtures to the gripper but to exploit it in its general-purpose mode.
-- a vision system consisting of an rgbd camera (depth not used for this purpose) and lighting system. Specifically, the camera is a RealSense d435, which was mounted on an articulated mechanical structure maintained statically at the ceiling. Instead, the lighting system was recovered from household applications, in the spirit of competition reuse.
+- a two-finger gripper, the hand-e robotiq model, mounted on the last joint of the robot. It was chosen not to add additional fixtures to the gripper but to exploit it in its general-purpose mode.
+- a vision system consisting of an rgbd camera (depth not used for this purpose) and lighting system. Specifically, the camera is a RealSense D435, which was mounted on an articulated mechanical structure maintained statically at the ceiling. Instead, the lighting system was recovered from household applications, in the spirit of competition reuse.
 
 ## Software Solution
-Our software framework is developed using ROS (Robot Operating System). The overall framework is summarized in figure below. At the beginning, the vision system localizes the board and its feature points and advertises the reference frames (Section 2.1). Then, the sequence of tasks is executed with respect to such frames. The execution of each task combines motion planning and different kind of controllers (Sections 2.2 and Section 2.3).
+Our software framework is developed using ROS (Robot Operating System). The overall framework is summarized in a figure below. At the beginning, the vision system localizes the board and its feature points and advertises the reference frames (Section 2.1). Then, the sequence of tasks is executed with respect to such frames. The execution of each task combines motion planning and different kind of controllers (Sections 2.2 and Section 2.3).
 
 ### Vision System (Board Localization)
 First of all, a Hand-Eye Calibration was performed in the eye-to-hand version (camera maintained static respect robot), in order to know the reference system of the camera with respect to the robot reference system (extrinsic calibration). 
@@ -25,7 +25,7 @@ In addition, an intrinsic calibration was performed, in order to switch between 
 
 These two calibrations were performed once offline, and the roto-translation matrices and others parameters were saved.
 
-As for the online part related to the vision system, it is used to identify the position of the board relative to the robot base. Specifically, an rgb frame is acquired as the first task, then features such as the center of the red button, key lock, and screen are identified. The features are recognized by applying border detection, color clustering, canny detection, Hough transform and custom designed vision algorithms. Once the features position was detected in the image frame, we moved on to the camera reference system and finally that of the robot base, thanks to the instrinsic and extrinsic parameters estimated in the offline part. The procedure is illustrated in the following image:
+As for the online localization, the vision system is used to identify the position of the board relative to the robot base. Specifically, an rgb frame is acquired as the first task, then features such as the center of the red button, key lock, and screen are identified. The features are recognized by applying border detection, color clustering, canny detection, Hough transform and custom designed vision algorithms. Once the features position is detected in the image frame, we move on to the camera reference system and finally that of the robot base, thanks to the instrinsic and extrinsic parameters estimated in the offline part. The procedure is illustrated in the following image:
 <p align="center">
   <img height="600" src="https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_report/blob/master/images/online_vision_scheme.png">
 </p>
