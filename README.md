@@ -71,7 +71,7 @@ Software developed specifically for Robothon:
 - [Task Execution management](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_tree)
 - [Cell Configuration (Geometric configuration and controllers)](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_cell)
 
-If you want run the entire code, follow this [guide](https://github.com/JRL-CARI-CNR-UNIBS/installation).
+If you want install the entire code, follow this [guide](https://github.com/JRL-CARI-CNR-UNIBS/installation).
 
 ## How to run
 First, load the robotic cell:
