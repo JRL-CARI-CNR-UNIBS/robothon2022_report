@@ -69,7 +69,7 @@ Our research group software needed:
 Software developed specifically for Robothon:
 - [Vision System](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_vision)
 - [Task Execution management](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_tree)
-- [Cell Configuration (Geometric configuration and controllers)](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_cell)
+- [Robotic cell description and configuration](https://github.com/JRL-CARI-CNR-UNIBS/robothon2022_cell)
 
 If you want install the entire code, follow this [guide](https://github.com/JRL-CARI-CNR-UNIBS/installation).
 
